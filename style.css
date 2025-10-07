@@ -281,3 +281,30 @@ footer {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
+
+/* --- 언어 설정 (오른쪽 상단 고정) --- */
+.language-selector {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+}
+
+.language-selector select {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-selector select:hover {
+  color: #0070f3;
+}
