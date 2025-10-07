@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 
         function typing() {
             if (i < text.length) {
-                if (text[i] === '<') { // 태그 시작
+                if (text[i] === '<') { 
                     let end = text.indexOf('>', i);
                     if (end !== -1) {
                         element.innerHTML += text.substring(i, end + 1);
@@ -31,7 +31,6 @@ window.addEventListener('load', () => {
                 setTimeout(typing, speed);
             }
         }
-
         typing();
     }
 
@@ -61,14 +60,13 @@ window.addEventListener('load', () => {
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 entry.target.classList.add('show');
-                todoObserver.unobserve(entry.target); // 한 번 나타나면 관찰 종료
+                todoObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
     todoItems.forEach(item => todoObserver.observe(item));
 
-    // 기존 scroll delta 방식도 유지 가능 (선택 사항)
     const todoSection = document.getElementById('todo-section');
     let currentIndex = 0;
     let scrollDelta = 0;
@@ -128,7 +126,7 @@ window.addEventListener('load', () => {
     // -------------------------------
     // 버튼
     // -------------------------------
-    const tarkovItem = document.querySelector('li#tarkov'); // li에 id="tarkov" 필요
+    const tarkovItem = document.querySelector('li#tarkov');
     if(tarkovItem){
         tarkovItem.addEventListener('click', () => {
             alert("개똥망겜");
@@ -146,4 +144,16 @@ window.addEventListener('load', () => {
             alert("Honda CIVIC");
         });
     }
+
+    // -------------------------------
+    // 🔥 언어 변경 이벤트 (이 부분 추가됨)
+    // -------------------------------
+    const langSelect = document.getElementById('language');
+    if (langSelect) {
+        langSelect.addEventListener('change', function() {
+            const url = this.value;
+            if (url) window.location.href = url;
+        });
+    }
+
 });
