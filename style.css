@@ -1,0 +1,283 @@
+/* --- 기본 스타일 --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { 
+  background: linear-gradient(135deg, #f0f2f5, #ffffff); 
+  color: #111; 
+  overflow-x: hidden; 
+}
+a { text-decoration: none; color: inherit; }
+
+/* --- Hero 섹션 --- */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #e0eaff, #ffffff);
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.05);
+}
+.hero h2 img { 
+  width: 200px; 
+  height: auto; 
+  margin-bottom: 20px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: all 0.6s ease; 
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.hero h1 { 
+  font-size: 4rem; 
+  font-weight: 700; 
+  margin-bottom: 1rem; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: all 0.6s ease; 
+  color: #0a0a0a;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.hero p { 
+  font-size: 1.5rem; 
+  color: #555; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: all 0.6s ease 0.3s; 
+}
+
+/* Hero img fade-in */
+.hero img {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+.hero h1.show, .hero p.show, .hero h2 img.show, .hero img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 타자 효과 
+.typing { 
+  display: inline-block; 
+  border-right: 2px solid #111; 
+  white-space: pre-line; 
+  overflow: hidden; 
+}*/
+
+/* --- Section --- */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  background: linear-gradient(180deg, #ffffff, #f5f7fa);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #111;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: center;
+}
+
+/* --- 섹션 fade-in --- */
+.fade-section { 
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: all 0.8s ease-out; 
+}
+.fade-section.show { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+/* --- Portfolio 카드 --- */
+.portfolio { 
+  
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 25px; 
+}
+
+.map-container {
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+  width: 100%;
+  height: 500px;           /* 원하는 높이 */
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.card {
+  padding: 30px; 
+  text-align: center;
+  min-height: 220px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  cursor: pointer;
+}
+.card:hover { 
+  transform: translateY(-15px) scale(1.04); 
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15); 
+  background: linear-gradient(145deg, #f0f4ff, #ffffff);
+}
+.card h3 { 
+  font-size: 1.4rem; 
+  margin-bottom: 12px; 
+}
+.card p { 
+  font-size: 1rem; 
+  color: #666; 
+  line-height: 1.5; 
+}
+
+/* --- Contact --- */
+.contact { 
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 40px; 
+  margin-top: 50px; 
+}
+.contact a { 
+  font-size: 1.5rem; 
+  transition: transform 0.2s ease, color 0.2s ease; 
+}
+.contact a:hover { 
+  transform: scale(1.2); 
+  color: #0070f3; 
+}
+
+/* --- Footer --- */
+footer { 
+  text-align: center; 
+  padding: 50px 20px; 
+  color: #888; 
+  font-size: 0.9rem; 
+}
+
+/* --- Todo Section --- */
+#todo-section {
+  min-height: 400px;      /* 최소 높이 */ 
+  margin: 0 auto;
+  padding: 80px 20px;     /* 여백 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.todo-list { 
+  list-style: none; 
+  font-size: 1.5rem; 
+}
+/* --- Todo 리스트 호버 효과 --- */
+.todo-list li {
+    opacity: 0;
+    transform: translateY(50px);
+    margin: 15px 0;
+    transition: all 0.4s ease, transform 0.4s ease;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e0e0ff, #ffffff);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.todo-list li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 호버 시 */
+.todo-list li:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #d0d0ff, #f0f4ff);
+}
+
+/* --- Hobby 리스트 --- */
+#hobby-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.hobby-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hobby-box {
+  background: linear-gradient(145deg, #ffffff, #f0f4ff);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  padding: 30px;
+  width: 300px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* IntersectionObserver로 등장 시 show 클래스 추가 */
+.hobby-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hobby-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.hobby-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.hobby-list li {
+  margin: 12px 0;
+  padding: 8px 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e0e0ff, #ffffff);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover 시 살짝 날아올라서 강조 */
+.hobby-list li:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
