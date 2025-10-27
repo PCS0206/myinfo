@@ -312,7 +312,7 @@ footer {
 .quote {
   position: fixed;
   top: 20px;
-  right: 25px;
+  left: 25px;
   z-index: 1000;
 }
 
