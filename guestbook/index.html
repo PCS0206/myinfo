@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>방명록 | Chaesung Guestbook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💬 Chaesung Guestbook</h1>
+      <p>이곳에 당신의 흔적을 남겨주세요.</p>
+    </header>
+
+    <section class="form-section">
+      <input type="text" id="name" placeholder="이름 (필수)" />
+      <textarea id="message" placeholder="메시지를 입력하세요..."></textarea>
+      <button id="submit">등록하기</button>
+    </section>
+
+    <section id="guestbook-list" class="guestbook-list">
+      <!-- 메시지 카드가 JS로 들어갑니다 -->
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Chaesung Guestbook — All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
