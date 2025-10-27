@@ -5,7 +5,6 @@
   --muted: #64748b;
   --line: #e2e8f0;
   --brand: #2563eb;
-  --brand-soft: #dbeafe;
   --radius: 16px;
   --shadow: 0 4px 12px rgba(2,6,23,.05);
 }
@@ -18,7 +17,7 @@ body {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 720px;
   margin: 40px auto;
   padding: 0 16px;
 }
@@ -28,57 +27,34 @@ header {
   margin-bottom: 30px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 26px;
-  font-weight: 800;
+h1 {
   color: var(--brand);
+  margin: 0;
+  font-weight: 800;
+  font-size: 28px;
 }
 
 header p {
   color: var(--muted);
-  font-size: 14px;
+  margin: 6px 0 16px;
 }
 
-.form-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 24px;
-}
-
-input, textarea {
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 12px;
-  font: inherit;
-  resize: none;
-}
-
-button {
+.btn {
+  display: inline-block;
   background: var(--brand);
   color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
   font-weight: 600;
   transition: .2s;
 }
-
-button:hover {
-  background: #1e40af;
-}
+.btn:hover { background: #1e40af; }
 
 .guestbook-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .card {
@@ -91,8 +67,8 @@ button:hover {
 
 .card-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   color: var(--muted);
   font-size: 14px;
   margin-bottom: 8px;
@@ -101,6 +77,7 @@ button:hover {
 .card-message {
   font-size: 16px;
   line-height: 1.5;
+  white-space: pre-line;
 }
 
 footer {
