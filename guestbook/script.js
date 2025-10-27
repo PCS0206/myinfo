@@ -1,6 +1,6 @@
 // ✅ 설정: 아래에 본인 GitHub 정보만 바꿔주면 끝
-const OWNER = "YOUR_GITHUB_USERNAME";     // 예: "chaesungpark"
-const REPO  = "guestbook";                // 예: "guestbook"
+const OWNER = "PCS0206";
+const REPO  = "myinfo";                
 
 const guestbookContainer = document.getElementById("guestbook");
 const newIssueBtn = document.getElementById("new-issue");
